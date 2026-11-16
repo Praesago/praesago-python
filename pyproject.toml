@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "praesago"
+dynamic = ["version"]
+description = "Python client for the Praesago API: England and Wales property and area data (sold prices, rents, listings statistics, planning, crime, schools, flood)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Praesago" }]
+keywords = ["property", "real-estate", "england", "wales", "postcode", "house-prices", "api", "mcp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://praesago.com"
+Documentation = "https://praesago.com/docs/api"
+Source = "https://github.com/Praesago/praesago-python"
+Pricing = "https://praesago.com/pricing"
+
+[tool.hatch.version]
+path = "src/praesago/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/praesago"]
+
+[tool.pytest.ini_options]
+markers = ["live: calls the real API (no key needed for these)"]
