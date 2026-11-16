@@ -97,6 +97,6 @@ The client retries rate limits (429) and server faults (5xx) twice, with back-of
 ## Also
 
 - MCP server for AI assistants: <https://praesago.com/docs/mcp>
-- JavaScript client: [`praesago` on npm](https://www.npmjs.com/package/praesago)
+- JavaScript client: [Praesago/praesago-js](https://github.com/Praesago/praesago-js)
 
 MIT licence.
