@@ -161,8 +161,14 @@ def test_env_key(stub, monkeypatch):
 
 @pytest.mark.live
 def test_live_demo_and_catalogue():
-    c = Praesago(api_key="")
-    assert c.demo()["district"]["district"] == "E17"
+    c = Praesago(api_key="", max_retries=0)
+    try:
+        demo = c.demo()
+    except PraesagoError as exc:
+        if exc.status == 403:
+            pytest.skip("Cloudflare blocks keyless calls from this network (cloud runners)")
+        raise
+    assert demo["district"]["district"] == "E17"
     assert "England and Wales" in c.catalogue()["coverage"]
 
 

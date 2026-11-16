@@ -2,7 +2,7 @@
 
 Python client for the [Praesago API](https://praesago.com/docs/api): property and area data for every postcode district in **England and Wales**. Sold prices, sector prices, price per square foot, rents and yields, weekly asking-market statistics, planning, crime, schools, flood risk, broadband and more, from official sources joined in one place.
 
-No dependencies. Python 3.9 or later.
+No dependencies. Python 3.10 or later.
 
 ```bash
 pip install praesago

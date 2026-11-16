@@ -9,7 +9,7 @@ description = "Python client for the Praesago API: England and Wales property an
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [{ name = "Praesago" }]
 keywords = ["property", "real-estate", "england", "wales", "postcode", "house-prices", "api", "mcp"]
 classifiers = [
